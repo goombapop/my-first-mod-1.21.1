@@ -3,6 +3,7 @@ package net.rosiestsum.myfirstmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.rosiestsum.myfirstmod.block.ModBlocks;
+import net.rosiestsum.myfirstmod.item.ModItemGroups;
 import net.rosiestsum.myfirstmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ public class MyFirstMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
