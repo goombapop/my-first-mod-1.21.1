@@ -1,13 +1,14 @@
 {
   "item.myfirstmod.pink_garnet": "Pink Garnet",
   "item.myfirstmod.raw_pink_garnet": "Raw Pink Garnet",
-  "item.myfirstmod.chisel": "chisel",
+  "item.myfirstmod.chisel": "Chisel",
 
 
   "block.myfirstmod.pink_garnet_block": "Block of Pink Garnet",
   "block.myfirstmod.raw_pink_garnet_block": "Block of Raw Pink Garnet",
   "block.myfirstmod.pink_garnet_ore": "Pink Garnet Ore",
   "block.myfirstmod.pink_garnet_deepslate_ore": "Deepslate Pink Garnet Ore",
+  "block.myfirstmod.magic_block": "Magic Block",
 
 
   "itemgroup.myfirstmod.pink_garnet_items": "Pink Garnet Items",
