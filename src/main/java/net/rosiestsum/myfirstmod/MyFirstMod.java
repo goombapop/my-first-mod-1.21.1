@@ -2,6 +2,7 @@ package net.rosiestsum.myfirstmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.rosiestsum.myfirstmod.block.ModBlocks;
 import net.rosiestsum.myfirstmod.item.ModItemGroups;
 import net.rosiestsum.myfirstmod.item.ModItems;
@@ -21,6 +22,8 @@ public class MyFirstMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.

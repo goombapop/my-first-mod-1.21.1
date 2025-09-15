@@ -19,6 +19,8 @@ public class ModItemGroups {
                         entries.add(ModItems.PINK_GARNET);
                         entries.add(ModItems.RAW_PINK_GARNET);
                         entries.add(ModItems.CHISEL);
+                        entries.add(ModItems.CAULIFLOWER);
+                        entries.add(ModItems.STARLIGHT_ASHES);
                     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -32,6 +34,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
                         entries.add(ModBlocks.MAGIC_BLOCK);
                     }).build());
+
 
     public static void registerItemGroups(){
         MyFirstMod.LOGGER.info("Registering Item groups for " + MyFirstMod.MOD_ID);
