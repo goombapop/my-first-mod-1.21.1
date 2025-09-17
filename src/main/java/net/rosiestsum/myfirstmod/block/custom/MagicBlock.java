@@ -7,6 +7,7 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -17,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.rosiestsum.myfirstmod.block.ModBlocks;
 import net.rosiestsum.myfirstmod.item.ModItems;
+import net.rosiestsum.myfirstmod.util.ModTags;
 
 import java.util.List;
 
@@ -35,14 +37,18 @@ public class MagicBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof ItemEntity itemEntity){
-            if (itemEntity.getStack().getItem() == ModBlocks.PINK_GARNET_BLOCK.asItem()){
-                itemEntity.setStack(new ItemStack(ModBlocks.RAW_PINK_GARNET_BLOCK.asItem(), itemEntity.getStack().getCount()));
-            }
-            else if (itemEntity.getStack().getItem() == ModItems.PINK_GARNET){
-                itemEntity.setStack(new ItemStack(ModItems.RAW_PINK_GARNET, itemEntity.getStack().getCount()));
+            if (isValidItem(itemEntity.getStack())){
+                world.playSound(entity, pos, SoundEvents.BLOCK_BELL_USE, SoundCategory.BLOCKS, 5.0f, 0.5f);
+                itemEntity.setStack(new ItemStack(Items.DIAMOND, itemEntity.getStack().getCount()));
             }
         }
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+
+
+    private boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
