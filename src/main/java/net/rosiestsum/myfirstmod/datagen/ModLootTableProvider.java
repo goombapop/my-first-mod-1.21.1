@@ -40,6 +40,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINK_GARNET_TRAPDOOR);
         addDrop(ModBlocks.PINK_GARNET_WALL);
 
+        addDrop(ModBlocks.PINK_GARNET_LAMP);
+
         addDrop(ModBlocks.MAGIC_BLOCK, multipleOreDrops(ModBlocks.MAGIC_BLOCK, ModItems.STARLIGHT_ASHES, 1, 5));
 
         addDrop(ModBlocks.PINK_GARNET_ORE, oreDrops(ModBlocks.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
