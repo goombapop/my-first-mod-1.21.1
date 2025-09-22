@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.rosiestsum.myfirstmod.block.ModBlocks;
+import net.rosiestsum.myfirstmod.component.ModDataComponentTypes;
 import net.rosiestsum.myfirstmod.item.ModItemGroups;
 import net.rosiestsum.myfirstmod.item.ModItems;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ public class MyFirstMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
