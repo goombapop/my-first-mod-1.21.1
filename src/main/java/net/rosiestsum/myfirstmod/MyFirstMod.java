@@ -2,11 +2,13 @@ package net.rosiestsum.myfirstmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.rosiestsum.myfirstmod.block.ModBlocks;
 import net.rosiestsum.myfirstmod.component.ModDataComponentTypes;
 import net.rosiestsum.myfirstmod.item.ModItemGroups;
 import net.rosiestsum.myfirstmod.item.ModItems;
+import net.rosiestsum.myfirstmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +26,8 @@ public class MyFirstMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.

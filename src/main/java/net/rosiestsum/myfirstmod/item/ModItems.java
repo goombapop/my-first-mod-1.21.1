@@ -9,6 +9,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rosiestsum.myfirstmod.MyFirstMod;
 import net.rosiestsum.myfirstmod.item.custom.ChiselItem;
+import net.rosiestsum.myfirstmod.item.custom.HammerItem;
 
 import java.util.List;
 
@@ -48,7 +49,9 @@ public class ModItems {
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe"
             , new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 0, -3.0f))));
-
+    public static final Item PINK_GARNET_HAMMER = registerItem("pink_garnet_hammer"
+            , new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -5.8f))));
     //registry
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(MyFirstMod.MOD_ID, name), item);
