@@ -28,6 +28,8 @@ public class ModItems {
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
+    public static final Item EDIBLE_WATER_BUCKET = registerItem("edible_water_bucket", new Item(new Item.Settings().maxCount(1).food(ModFoodComponents.EDIBLE_WATER_BUCKET)));
+    public static final Item EDIBLE_LAVA_BUCKET = registerItem("edible_lava_bucket", new Item(new Item.Settings().maxCount(1).food(ModFoodComponents.EDIBLE_LAVA_BUCKET)));
 
     //fuel items
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));

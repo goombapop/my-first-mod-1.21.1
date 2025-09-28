@@ -31,6 +31,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.DECORATIONS, ModItems.PINK_GARNET, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.DECORATIONS, ModItems.RAW_PINK_GARNET, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PINK_GARNET_BLOCK);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.EDIBLE_WATER_BUCKET)
+                .pattern(" W ")
+                .pattern(" B ")
+                .pattern("   ")
+                .input('B', Items.BUCKET)
+                .input('W', Items.WATER_BUCKET)
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .offerTo(exporter);
+        offerSingleOutputShapelessRecipe(exporter, Items.WATER_BUCKET, ModItems.EDIBLE_WATER_BUCKET, "water_bucket");
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.EDIBLE_LAVA_BUCKET)
+                .pattern(" L ")
+                .pattern(" B ")
+                .pattern("   ")
+                .input('B', Items.BUCKET)
+                .input('L', Items.LAVA_BUCKET)
+                .criterion(hasItem(Items.LAVA_BUCKET), conditionsFromItem(Items.LAVA_BUCKET))
+                .offerTo(exporter);
+        offerSingleOutputShapelessRecipe(exporter, Items.LAVA_BUCKET, ModItems.EDIBLE_LAVA_BUCKET, "lava_bucket");
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CHISEL)
                 .pattern("  P")
                 .pattern(" S ")

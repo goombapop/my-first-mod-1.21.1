@@ -55,6 +55,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_GARNET_WALL);
                         entries.add(ModBlocks.PINK_GARNET_LAMP);
                     }).build());
+    public static final ItemGroup RANDOM_STUFF_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(MyFirstMod.MOD_ID, "random_stuff_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.EDIBLE_WATER_BUCKET))
+                    .displayName(Text.translatable("itemgroup.myfirstmod.random_stuff_items"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.EDIBLE_WATER_BUCKET);
+                        entries.add(ModItems.EDIBLE_LAVA_BUCKET);
+                    }).build());
 
 
     public static void registerItemGroups(){
